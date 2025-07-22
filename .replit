@@ -2,4 +2,20 @@ modules = ["python-3.12", "web"]
 
 [nix]
 channel = "stable-24_05"
-packages = ["libGL", "libGLU"]
+packages = ["libGL", "libGLU", "libjpeg_turbo", "libpng", "which"]
+
+[workflows]
+runButton = "Run"
+
+[[workflows.workflow]]
+name = "Run"
+author = 45004260
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python app.py"
+
+[[ports]]
+localPort = 5000
+externalPort = 80
