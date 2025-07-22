@@ -1,12 +1,7 @@
+
 opencv-python
 ultralytics
 Flask
-Flask
-numpy
-opencv-python
-ultralytics
-Flask
-opencv-python
 torch
 torchvision
-ultralytics
+numpy

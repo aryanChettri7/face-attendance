@@ -4,6 +4,7 @@ import numpy as np
 
 class VideoCamera:
     def __init__(self):
+        # Try to use camera first, then fallback to dummy frames
         self.cap = cv2.VideoCapture(0)
         if not self.cap.isOpened():
             # Fallback to a dummy frame if camera is not available
